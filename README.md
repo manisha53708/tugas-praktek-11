@@ -35,5 +35,7 @@ Follow these steps to deploy and test the app locally on your machine:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/MANISHAARAJSKAUR/shopcatalog-api-app.git](https://github.com/MANISHAARAJSKAUR/shopcatalog-api-app.git)
-   cd shopcatalog-api-app
+   git clone [https://github.com/manisha53708/tugas-praktek-11.git](https://github.com/manisha53708/tugas-praktek-11.git)
+   cd tugas-praktek-11
+
+   | ![Loading](https://github.com/manisha53708/tugas-praktek-11/blob/main/assets/loading.jpeg) | ![Success](https://github.com/manisha53708/tugas-praktek-11/blob/main/assets/berhasil.jpeg) | ![Error](https://github.com/manisha53708/tugas-praktek-11/blob/main/assets/error.jpeg) |
