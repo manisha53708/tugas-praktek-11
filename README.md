@@ -1,41 +1,55 @@
-# ShopCatalog Pro - REST API Client App
+# 📱 ShopCatalog Pro - REST API Client Application
 
-A functional Mobile Application built using React Native and Expo to consume data from a Public REST API. This project showcases structured state management, error handling, client-side data manipulation, and modern UI practices.
-
-## 📱 Features
-
-### Level 1 — Core Features (Wajib)
-- **Async/Await Integration:** Fetches product data asynchronously from FakeStore API.
-- **Single Mount Fetch:** Powered by `useEffect` with an empty dependency array (`[]`).
-- **3-State UI Handling:** Smooth transition states for:
-  - 🔄 **Loading State:** `ActivityIndicator` display while data fetches.
-  - ❌ **Error State:** Descriptive error prompt equipped with a operational **"Coba Lagi" (Retry) Button**.
-  - ✅ **Success State:** Dynamic item listing using `FlatList`.
-- **Advanced Error Handling:** Secured with structural `try / catch / finally` blocks ensuring proper resource disposal.
-- **Robust Item Cards:** Renders standard properties including Product Image, Title, Category, and Price.
-
-### Level 2 & 3 — Extended Features (Pilihan Tambahan)
-- 🔄 **Pull-to-Refresh:** Swipe down to clear cache and reload updated data states directly from the endpoint server.
-- 🔎 **Client-Side Search Filter:** Local operational searching that matches titles and categories instantly as you type.
-- 📄 **Detail Modal Layout:** Tapping any product opens a safe contextual Modal containing complete metrics (Detailed description).
-- 🎨 **Smart Empty State (Level 3):** Renders clean visual fallbacks instead of an empty white screen if search returns zero matches.
+A robust Mobile Application built using **React Native** and the **Expo Workflow** designed to consume, filter, and present data dynamically from a public REST API endpoint. This project serves as a comprehensive implementation of modern mobile development standards, showcasing structured state management, graceful error handling, and intuitive client-side interactions.
 
 ---
 
-## 🛠️ Tech Stack & Tools
-- **Framework:** React Native (Expo Workflow)
-- **Environment Run Target:** Expo Go (Tested on Physical Device)
-- **Data Source Provider:** FakeStore API (`https://fakestoreapi.com/products`)
+## 🎯 Project Assignment Overview
+
+- **Timeframe / Deadline:** 1 Week
+- **Core Technology Stack:** React Native (Expo Go Framework)
+- **Data Architecture:** REST API Integration via `fetch` utilizing modern asynchronous JavaScript (`async/await`).
+- **Target Endpoint:** FakeStore API (`https://fakestoreapi.com/products`)
 
 ---
 
-## 🚀 Setup Instructions (How to Run)
+## 📱 Implemented Features & Rubric Checklist
 
-Follow these steps to deploy and test the app locally on your machine:
+### 🟢 Level 1 — Core Features (100% Compliant)
+- **Asynchronous Data Layer:** Fully integrated API requests using standard `fetch` with `async/await` syntax wrapped securely inside a lifecycle `useEffect` hook to prevent memory leaks and infinite rendering loops.
+- **Robust 3-State UI System:**
+  - 🔄 **Loading State:** Native `ActivityIndicator` displays a clean loader during background data fetching.
+  - ❌ **Error State:** Implements custom catch-blocks that render helpful messages along with a fully operational **"Coba Lagi" (Retry) Button** that re-triggers the lifecycle fetch function.
+  - ✅ **Success State:** Seamlessly lists raw catalog data once the payload successfully transfers from the server.
+- **Defensive Error Handling:** Code block architecture structured around strict `try / catch / finally` handling where active loaders are systematically killed inside the `finally` block regardless of completion status.
+- **Optimized List Rendering:** Implements the `FlatList` component equipped with proper unique `keyExtractor` indexing.
+- **Rich Context Cards:** Each visual card displays a minimum of three required data fields: Product Image, Product Title, Category Tag, and Price Currency.
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/manisha53708/tugas-praktek-11.git](https://github.com/manisha53708/tugas-praktek-11.git)
-   cd tugas-praktek-11
+### 🟡 Level 2 — Advanced Enhancements (Selected Features)
+- 🔄 **Pull-to-Refresh:** Screen-swipe gesture trigger bound directly to the `refreshControl` prop, allowing users to forcefully wipe cache states and reload original listings from the endpoint.
+- 🔎 **Client-Side Search Filter:** Live interactive text monitoring input (`TextInput`) that processes and dynamically reduces the native list layout by scanning product titles or categories instantly on the user's physical hardware.
+- 📄 **Detail Modal Display Overlay:** Tapping any product card halts core viewport focus to cleanly slide up a contextual, high-fidelity native `Modal` sheet carrying extensive parameters including deep descriptions.
 
-   | ![Loading](https://github.com/manisha53708/tugas-praktek-11/blob/main/assets/loading.jpeg) | ![Success](https://github.com/manisha53708/tugas-praktek-11/blob/main/assets/berhasil.jpeg) | ![Error](https://github.com/manisha53708/tugas-praktek-11/blob/main/assets/error.jpeg) |
+### 🔴 Level 3 — Bonus Integration (+ Extra Grade Points)
+- 🎨 **Smart UI Empty State:** Introduces a custom fallback view layout (`ListEmptyComponent`) that populates the viewport with diagnostic feedback alerts if a client-side search query yields zero items.
+
+---
+
+## 📸 Screenshots (Expo Go Test Cases)
+
+Below are the verified test case representations conducted on a physical mobile hardware layer via the **Expo Go** environment:
+
+| 🔄 1. Loading State | ✅ 2. Success State | ❌ 3. Error State (+ Retry) |
+| :---: | :---: | :---: |
+| ![Loading](https://github.com/manisha53708/tugas-praktek-11/blob/main/assets/loading.jpeg) | ![Success](https://github.com/manisha53708/tugas-praktek-11/blob/main/assets/berhasil.jpeg) | ![Error](https://github.com/manisha53708/tugas-praktek-11/blob/main/assets/error.jpeg) |
+
+---
+
+## 🚀 Setup & Execution Instructions
+
+Follow these instructions to clone, boot, and test the system locally on your environment terminal:
+
+### 1. Clone the Source Repository
+```bash
+git clone [https://github.com/manisha53708/tugas-praktek-11.git](https://github.com/manisha53708/tugas-praktek-11.git)
+cd tugas-praktek-11
